@@ -16,6 +16,8 @@ The goal is to make the repo feel useful on GitHub, not just a folder of solved 
 ## Quick start
 
 ```bash
+python -m pip install -e .
+patterns-playground practice --count 3
 ```
 
 ## Pattern notes
