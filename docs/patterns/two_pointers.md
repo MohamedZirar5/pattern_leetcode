@@ -42,6 +42,39 @@ bool hasPairWithSum(const std::vector<int>& values, int target) {
 - Time: $O(n)$
 - Space: $O(1)$
 
+## Variant: Slow and Fast Pointers in Linked Lists
+
+Use two pointers moving at different speeds to solve problems involving linked list cycles, finding the middle, or tail node detection.
+
+**Key pattern:** Move one pointer one step at a time and the other two steps. If they meet, there is a cycle.
+
+```cpp
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
+
+bool hasCycle(ListNode* head) {
+    if (!head || !head->next) return false;
+    
+    ListNode* slow = head;
+    ListNode* fast = head->next;
+    
+    while (fast && fast->next) {
+        if (slow == fast) {
+            return true;
+        }
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    
+    return false;
+}
+```
+
+**Complexity:** Time $O(n)$, Space $O(1)$
+
 ## Mistake to avoid
 
 Do not move both pointers blindly. Each move should be justified by the comparison result. Moving the wrong pointer defeats the invariant.
