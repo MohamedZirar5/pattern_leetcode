@@ -4,5 +4,8 @@ __pycache__/
 dist/
 build/
 .DS_Store
-# compiled examples
+
+# compiled examples (C++ binaries)
+examples/two_pointers
+examples/sliding_window
 examples/digit_dp
