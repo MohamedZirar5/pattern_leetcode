@@ -6,6 +6,6 @@ build/
 .DS_Store
 
 # compiled examples (C++ binaries)
-examples/two_pointers
-examples/sliding_window
-examples/digit_dp
+examples/*
+!examples/*.cpp
+!examples/*.md
