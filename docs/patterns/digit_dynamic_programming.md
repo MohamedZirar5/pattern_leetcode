@@ -6,6 +6,7 @@ Digit DP is a technique for counting or optimizing over numbers by processing th
 
 - You need to count or find properties of numbers in a range [0..N] (or between A and B).
 - The property depends on digits (sum of digits, contains/avoids certain digits, digit order constraints, etc.).
+- A range query between `A` and `B` is usually solved as `count(B) - count(A - 1)`.
 
 ## Core idea
 
@@ -15,6 +16,8 @@ Represent the upper bound `N` as a digit array. Build a recursive DP processing 
 - `tight`: whether the prefix equals the prefix of `N` (restricting the next digit)
 - `leading_zero`: whether we've seen any non-zero digits yet (affects some properties)
 - additional problem-specific state (e.g., current sum modulo k, whether we have seen a forbidden pattern)
+
+The `leading_zero` flag is the difference between counting the number `0` correctly and accidentally treating shorter numbers as if they had the same digit length as `N`.
 
 Transition by trying all allowed digits 0..limit where `limit` is `9` or the digit from `N` depending on `tight`.
 
