@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cassert>
+#include <stdexcept>
 
 int maxSumSubarray(const std::vector<int>& values, int k) {
     if (k <= 0 || k > (int)values.size()) throw std::invalid_argument("k out of range");
