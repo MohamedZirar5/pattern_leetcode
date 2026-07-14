@@ -4,7 +4,7 @@ LeetCode Patterns Playground is a compact DSA repo focused on original explanati
 
 ## What is here
 
-- Five core pattern notes written from scratch: two pointers, sliding window, BFS, DFS, and binary search.
+- Six core pattern notes written from scratch: two pointers, sliding window, BFS, DFS, binary search, and digit DP.
 - Example C++ solutions that show the shape of each pattern without copying problem statements.
 - Clean, focused code with complexity analysis and common pitfalls documented.
 - Clear decision-making process for each pattern.
@@ -29,4 +29,4 @@ Study the C++ example and test it in your local environment or IDE.
 3. Study the C++ example code
 4. Implement variations on your own
 
-Use `patterns-playground journal add` to record mistakes, fixes, and the pattern you want to revisit. The CLI keeps the data in `~/.leetcode-patterns-playground/` so the history stays on your machine.
+Keep your own practice notes locally so you can revisit mistakes and compare approaches without cluttering the repository.
